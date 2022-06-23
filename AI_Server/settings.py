@@ -58,10 +58,9 @@ INSTALLED_APPS = [
 
     # Rest API
     'rest_framework',
-    'rest_framework_swagger',
-
+    
     # App
-    'server',
+    'api',
 ]
 
 MIDDLEWARE = [
