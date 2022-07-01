@@ -1,8 +1,6 @@
-from re import A
-from tokenize import String
 from django.views import View
 import json
-from .ai.djanog_fn import _output
+from .ai.django_fn import _output
 from django.http import JsonResponse
 import os
 
@@ -20,7 +18,7 @@ class PredictView(View):
         # 모델 위치 상대 경로
         file_path = os.path.abspath(__file__)
         folder_path = os.path.dirname(file_path)
-        model_pth = os.path.join(folder_path, 'ai/best_model.pth')
+        model_pth = os.path.join(folder_path, 'ai/model/best_model_dropout_0.1.pth')
         
         # 모델 돌리기
         emotion = _output(url, model_pth)
