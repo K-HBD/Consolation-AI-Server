@@ -11,9 +11,9 @@ class PredictView(View):
         json_object = json.loads(request.body)
 
         # if spring이 접근할 때 
-        url = json_object
+        # url = json_object
         # if 장고만 쓸때
-        # url = json_object['imageUrl']
+        url = json_object['imageUrl']
 
         # 모델 위치 상대 경로
         file_path = os.path.abspath(__file__)
